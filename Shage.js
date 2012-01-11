@@ -1,19 +1,24 @@
-function Shage(){
+function Shape(body, status){
+	this.body = body;
+	this.status = status;
 	this.top = 0;
 	this.left = 0;
 	this.moveLeft = function(){
-		console.log("i moved left.");
+		console.log("shape moved left.");
 	};
 	this.moveRight = function(){
-		console.log("i moved right.");	
+		console.log("shape moved right.");	
 	};
 	this.moveDown = function(){
-		console.log("i moved down.");
+		console.log("shape moved down.");
 	};
 	this.rotate = function(){
-		console.log("i rotated.");
+		console.log("shape rotated.");
 	};
 	this.drawMe = function(){
-		console.log("drawd myself.");
+		console.log("shape drew itself.");
 	};
+	windown.setInterval(function(){
+		this.moveDown();
+	}, 1000);
 }
