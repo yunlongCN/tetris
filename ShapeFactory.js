@@ -15,7 +15,7 @@ var ShapeFactory = {
 			colorCount = colors.length,
 			count = shapes.length;
 		body = shapes[Math.floor(Math.random()*count)];
-		color = colors[Math.floor(Math.random()*colorCount)];
+		color = colors[Math.floor(Math.random()*colorCount+1)];
 		shape = new Shape(ctx, body, CONST.INIT_SHAPE_TOP,
 			 CONST.INIT_SHAPE_LEFT, color);
 		console.log("a shape created by factory. bd:"+body);

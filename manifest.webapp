@@ -1,0 +1,30 @@
+{
+  "name": "Tetris",
+  "description": "Tetris",
+  "launch_path": "/index.html",
+  "type": "certified",
+  "fullscreen": true,
+  "developer": {
+    "name": "shaolong",
+    "url": "http://mozilla.com.cn"
+  },
+  "permissions": {
+    "settings":{ "access": "readwrite" }
+  },
+  "locales": {
+    "en-US": {
+      "name": "Tetris",
+      "description": "Tetris"
+    },
+    "zh-CN": {
+      "name": "俄罗斯方块",
+      "description": "俄罗斯方块"
+    }
+  },
+  "default_locale": "zh-CN",
+  "icons": {
+    "120": "/style/icon/Tetris.png",
+    "60": "/style/icon/60/Tetris.png"
+  },
+  "orientation": "portrait-primary"
+}

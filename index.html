@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Tetris for mobile devices.">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" href="style/ui.css" type="text/css"/>
+</head>
+<body>
+
+<section id="view-start">
+    <div id="menu-main" class="menu">
+        <div id="btnStart">开始游戏</div>
+        <!--<div id="btn-score">分数榜</div>-->
+    </div>
+    <div class="ui-logo">Demo</div>
+</section>
+
+<section id="view-game" class="none">
+    <div id="main">
+        <canvas id="gamePanel" height="460" width="200"></canvas>	
+    </div>
+    <div id="btnPause" class="btnPause"></div>
+    <div id="ui-pause" class="ui-pause menu none">
+        <div id="btnResume">继续</div>
+        <div id="btnQuit">退出游戏</div>
+    </div>
+     <div id="ui-over" class="ui-over menu none">
+        <div id="btnReplay">再玩一盘</div>
+        <div id="btnQuit2">退出游戏</div>
+    </div>
+    <div id="sidebar">
+    	<div id="score">0</div>
+    	<div id="ui-control" class="ui-control">
+            <div id="btnLeft" class="btn left"></div>
+            <div id="btnUp" class="btn up"></div>
+            <div id="btnRight" class="btn right"></div>
+            <div id="btnDown" class="btn down"></div>
+        </div>
+    </div>
+</section>
+<div style="display:none;">
+    <p id="console" style="margin:10px auto;"></p>
+</div>
+<script type="text/javascript" src="init.js"></script>
+<script type="text/javascript" src="Utils.js"></script>
+<script type="text/javascript" src="Shape.js"></script>
+<script type="text/javascript" src="ShapeFactory.js"></script>
+<script type="text/javascript" src="Ground.js"></script>
+<script type="text/javascript" src="Game.js"></script>
+</script>
+</body>
+</html>
