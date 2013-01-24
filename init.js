@@ -150,7 +150,7 @@ btnStart.onclick = function(){
 }
 
 function pauseGame(){
-    if (game.isPause()) {
+    if (!game.isRunning() || game.isPause()) {
         return;
     }
     game.pause();

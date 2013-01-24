@@ -26,6 +26,9 @@ var game = {
 		// this.shape = ShapeFactory.newShape(this.ctx);
 		return this;
 	},
+	isRunning: function(){
+	    return !!this.shape;  
+	},
 	start: function(){
 		var This = this;
 		This.onKeypress = function(e){
