@@ -8,8 +8,8 @@
     border: 0 none;
 }
 body {
-    width: 320px;
-    height: 480px;
+    width: 480px;
+    height: 640px;
     overflow: hidden;
 }
 section {
@@ -25,13 +25,13 @@ section {
     background: url("image/chrome.jpg") no-repeat scroll 0 0 / 100% 100% transparent;
 }
 div#main{
-    height: 475px;
-    width: 215px;
+    height: 628px;
+    width: 320px;
     float: left;
 }
 div#sidebar{
     float: right;
-    width: 100px;
+    width: 150px;
     height: 100%;
 }
 div#control-pad{
@@ -47,7 +47,7 @@ div#info{
     height: 30px;
 }
 div#score {
-    margin-top: 212px;
+    margin-top: 280px;
     font-family: tobec, helvetica, sans-serif;
     font-size: 24px;
     color: #0f0;
@@ -64,7 +64,7 @@ p#console{
 }
 canvas{
     display: block;
-    margin: 10px 0 0 10px;
+    margin: 10px 0 0 20px;
 }
 .menu{
     position: relative;
@@ -113,8 +113,9 @@ canvas{
 .ui-control {
     cursor: pointer;
     height: 60px;
+    margin-left: 25px;
+    margin-top: 150px;
     width: 60px;
-    margin-top: 140px;
     /*
     position: absolute;
     right: 40px;
@@ -124,14 +125,14 @@ canvas{
     */
 }
 .btn{
-    width: 0; 
+    width: 0;
     height: 0;
 }
 .up {
     float: left;
     margin-top: -30px;
-    border-left: 15px solid transparent; 
-    border-right: 15px solid transparent; 
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
     border-bottom: 30px solid rgba(255, 255, 255, 0.4);
 }
 .down {

@@ -3,11 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description" content="Tetris for mobile devices.">
+    <!--
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<link rel="stylesheet" href="style/ui.css" type="text/css"/>
+    -->
+<link rel="stylesheet" media="all and (width:320px)" href="style/ui320x480.css" type="text/css"/>
+<link rel="stylesheet" media="all and (width:480px)" href="style/ui480x640.css" type="text/css"/>
 </head>
-<body>
+<body id="body">
 
 <section id="view-start">
     <div id="menu-main" class="menu">
@@ -19,7 +22,7 @@
 
 <section id="view-game" class="none">
     <div id="main">
-        <canvas id="gamePanel" height="460" width="200"></canvas>	
+        <canvas id="gamePanel" height="460" width="200"></canvas>
     </div>
     <div id="btnPause" class="btnPause"></div>
     <div id="ui-pause" class="ui-pause menu none">
@@ -49,6 +52,32 @@
 <script type="text/javascript" src="ShapeFactory.js"></script>
 <script type="text/javascript" src="Ground.js"></script>
 <script type="text/javascript" src="Game.js"></script>
+<script type="text/javascript">
+function getStyle(el,styleProp)
+{
+	var x = document.getElementById(el);
+	if (x.currentStyle)
+		var y = x.currentStyle[styleProp];
+	else if (window.getComputedStyle)
+		var y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleProp);
+	return y;
+}
+window.onload = function() {
+    var width = parseInt(getStyle("body", "width")),//window.innerWidth,
+        height = parseInt(getStyle("body", "height")),
+        canvas = $("gamePanel");//window.innerHeight;
+    switch (width) {
+        case 320:
+            canvas.width = 200;
+            canvas.height = 460;
+            break;
+        case 480:
+            canvas.width = 310;
+            canvas.height = 620;
+            break;
+        default:
+    }
+}
 </script>
 </body>
 </html>

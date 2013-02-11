@@ -1,0 +1,174 @@
+@font-face {
+    font-family: tobec;
+    src: url(font/tobec.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+}
+body {
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow:hidden !important;
+}
+#view-start{
+    background:#222;
+}
+#view-game {
+    background: url("image/chrome.jpg") no-repeat scroll 0 0 / 100% 100% transparent;
+}
+div#main{
+    height: 475px;
+    width: 215px;
+    float: left;
+}
+div#sidebar{
+    float: right;
+    width: 100px;
+    height: 100%;
+}
+div#control-pad{
+    display: none;
+    width: 500px;
+    height: 20px;
+}
+div#info{
+    margin: 20px 0;
+    padding: 20px 10px 10px;
+    border: 1px dotted;
+    width: 480px;
+    height: 30px;
+}
+div#score {
+    margin-top: 212px;
+    font-family: tobec, helvetica, sans-serif;
+    font-size: 24px;
+    color: #0f0;
+    -moz-transform: rotate(10deg);
+    text-shadow: #000 0 1px;
+    text-align: center;
+}
+p#console{
+    border: 1px solid;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 500px;
+}
+canvas{
+    display: block;
+    margin: 10px 0 0 12px;
+}
+.menu{
+    position: relative;
+    width:100%;
+    padding:20px 0;
+    background-color: #222;
+    border-radius: 5px;
+    box-shadow: #222 0 0 40px 20px;
+}
+.menu > div{
+    display:block;
+    border-radius: 10px;
+    text-shadow: -1px -2px 2px rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    font-size: 18pt;
+    margin: 20px;
+    padding: 10px 20px 11px;
+    color: #FFFFFF;
+    cursor:pointer;
+    text-align: center;
+    text-decoration:none !important;
+}
+.menu :first-child{
+    margin-top:10px;
+}
+#btnStart,#btnResume,#btnReplay{
+    background:#FF5C00;
+}
+#btnScore,#btnQuit,#btnQuit2,#btnHelp{
+    background:#333333;
+}
+.none{
+    display:none;
+}
+.btnPause {
+    position:absolute;
+    left: 5px;
+    top: 2px;
+    width:60px;
+    height:60px;
+    z-index:100;
+    background-image: url(image/pause.png);
+    background-size:100% 100%;
+    cursor: pointer;
+}
+.ui-control {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    margin-top: 140px;
+    /*
+    position: absolute;
+    right: 40px;
+    background-size: 100% 100%;
+    bottom: 23px;
+    z-index: 100;
+    */
+}
+.btn{
+    width: 0;
+    height: 0;
+}
+.up {
+    float: left;
+    margin-top: -30px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid rgba(255, 255, 255, 0.4);
+}
+.down {
+    float: right;
+    margin-top: 30px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid rgba(255, 255, 255, 0.4);
+}
+.left {
+    float: left;
+    border-top: 15px solid transparent;
+    border-right: 30px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 15px solid transparent;
+}
+.right {
+    float: right;
+    margin-right: -30px;
+    border-top: 15px solid transparent;
+    border-left: 30px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 15px solid transparent;
+}
+.ui-logo{
+    position: absolute;
+    line-height:50px;
+    text-align:right;
+    color:#EFEFEF;
+    bottom:10px;
+    right:20px;
+    font-family: sans-serif;
+}
+.ui-pause,.ui-over{
+    z-index:200;
+    margin-top:50%;
+    position: absolute;
+    /*margin-top:-moz-calc(50%-attr(height)/2*/
+}
+#menu-main{
+    margin-top: 50%;
+}
